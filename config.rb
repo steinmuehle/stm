@@ -49,6 +49,16 @@
   #   end
   # end
 
+  activate :deploy do |deploy|
+    # ...
+    deploy.build_before = true # default: false
+    deploy.method = :git
+    # Optional Settings
+    # deploy.remote   = "custom-remote" # remote name or git url, default: origin
+    # deploy.branch   = "custom-branch" # default: gh-pages
+    # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  end
+
   # Build-specific configuration
   configure :build do
     # For example, change the Compass output style for deployment
@@ -86,6 +96,7 @@
       options.gifsicle_options  = {:interlace => false}
       #options.svgo_options      = {}
     end
+
 
   # Use relative URLs
   # activate :relative_assets
