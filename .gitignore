@@ -1,0 +1,11 @@
+
+# bundler config
+.bundle/
+
+# ignore build directory
+build/
+
+# ignore locally installed gems
+vendor/
+
+*.taskpaper
