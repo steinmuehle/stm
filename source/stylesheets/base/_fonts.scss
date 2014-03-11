@@ -2,8 +2,26 @@
  *  Fonts
  *  ========================================================================== */
 
+/*
+ *font-family: 'Averia Sans Libre', cursive;
+ *font-family: 'PT Sans', sans-serif;
+ *font-family: 'Quicksand', sans-serif;
+ *font-family: 'EB Garamond', serif;
+ *font-family: 'Forum', cursive;
+ *font-family: 'Raleway', sans-serif;
+ */
+
+@import 'modular-scale';
+$ms-base: .8em;
+$ms-ratio: $minor-third;
+
+$heading-color: #222;
+
+
 h1, h2, h3, h4, h5 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  color: $heading-color;
 }
 
 body {
