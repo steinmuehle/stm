@@ -33,6 +33,12 @@ body {
   width: 100%;
   background-image: url(../images/hall_bright.jpg);
   background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.Footer {
+  height: 100px;
+
 }
 
 .l-center {
@@ -59,7 +65,10 @@ body {
   position: relative;
 }
 
-
+#map {
+  height: 280px;
+  width: 100%;
+}
 /*.c-grid {*/
   /*@include span-columns(8 alpha, 12);*/
 /*}*/
