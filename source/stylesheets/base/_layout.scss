@@ -5,21 +5,58 @@
 /*
  * Grid
  */
-@import "susy";
+/*
+ *@import "susy";
+ *
+ *$indent-val: .5em !default;
+ *$paragraph-vertical-whitespace: false !default;
+ *
+ *$total-columns  : 12;
+ *$column-width   : 4em;[>6%;<]
+ *$gutter-width   : 1em;
+ *[>$side-gutter-width: 2em;<]
+ *$grid-padding   : $gutter-width;
+ *$show-grid-backgrounds: true;
+ */
 
-$indent-val: .5em !default;
-$paragraph-vertical-whitespace: false !default;
-
-$total-columns  : 12;
-$column-width   : 4em;/*6%;*/
-$gutter-width   : 1em;
-/*$side-gutter-width: 2em;*/
-$grid-padding   : $gutter-width;
-$show-grid-backgrounds: true;
+@import 'modular-scale';
+$ms-base: .2em;
+$ms-ratio: $golden;
 
 body {
-  /*@include container;*/
-  /*@include susy-grid-background;*/
+  background-image: url(../images/cream_dust.png);
+  background-repeat: repeat;
+}
+
+.Header {
+  height: 768px;
+  width: 100%;
+  background-image: url(../images/hall_bright.jpg);
+  background-size: 100% auto;
+}
+
+.l-center {
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-color: #fff;
+}
+
+.l-txt-bottom {
+  position: absolute;
+  bottom: 15px;
+}
+
+#logo {
+  background-color: white;
+  text-align: center;
+  width: 150px;
+  height: 200px;
+  margin-left: 100px;
+  position: relative;
 }
 
 
@@ -46,29 +83,43 @@ body {
 }
 
 
+/*.l-pullout-alpha {*/
+  /*padding-top: 1.5em;*/
+  /*padding-bottom: 1.5em;*/
+  /*margin-left: -1em;*/
+/*}*/
+
 .l-pullout-alpha {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  margin-left: -1em;
+  padding-top: ms(4);
+  padding-bottom: ms(4);
+  margin-left: (-1 * ms(4));
 }
 
 .l-pullout-beta {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  margin-left: -1em;
+  padding-top: ms(3);
+  padding-bottom: ms(3);
+  margin-left: (-1 * ms(3));
 }
 
 .l-pullout-gamma {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  margin-left: -1em;
+  padding-top: ms(4);
+  padding-bottom: ms(2);
+  margin-left: (-1 * ms(3));
+}
+
+hr {
+  width: ms(4);
+  height: ms(4);
+  margin-top: ms(6);
+  margin-bottom: ms(6);
+  border: none;
+  background: url(../images/yingyang.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
 /*
  * Basic settings
  */
 
-/*li:before {*/
-  /*font-family: 'FontAwesome';*/
-  /*content: '\f105';*/
-  /*margin:0 5px 0 -15px;*/
-/*}*/
