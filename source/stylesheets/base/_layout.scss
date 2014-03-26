@@ -5,6 +5,9 @@
 /*
  * Grid
  */
+
+
+
 /*
  *@import "susy";
  *
@@ -19,9 +22,18 @@
  *$show-grid-backgrounds: true;
  */
 
+
+
+
 @import 'modular-scale';
 $ms-base: .2em;
 $ms-ratio: $golden;
+
+/*
+ * Colors
+ */
+
+$grey: #f2f2f2;
 
 body {
   background-image: url(../images/cream_dust.png);
@@ -31,7 +43,7 @@ body {
 .Header {
   height: 768px;
   width: 100%;
-  background-image: url(../images/hall_bright.jpg);
+  background-image: url(../images/singing-bowl.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -58,6 +70,9 @@ body {
 
 #logo {
   background-color: white;
+  border-right: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+  border-left: 1px solid $grey;
   text-align: center;
   width: 150px;
   height: 200px;
@@ -67,7 +82,6 @@ body {
 
 #map {
   height: 280px;
-  width: 100%;
 }
 /*.c-grid {*/
   /*@include span-columns(8 alpha, 12);*/
