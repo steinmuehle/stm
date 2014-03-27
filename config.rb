@@ -52,6 +52,7 @@
     @bower_assets_path = File.join "#{root}", @bower_config["directory"]
     sprockets.append_path @bower_assets_path
   end
+
   # Methods defined in the helpers block are available in templates
   # helpers do
   #   def some_helper
@@ -59,14 +60,12 @@
   #   end
   # end
 
-  activate :deploy do |deploy|
-    # ...
-    deploy.build_before = true # default: false
-    deploy.method = :git
-    # Optional Settings
-    # deploy.remote   = "custom-remote" # remote name or git url, default: origin
-    # deploy.branch   = "custom-branch" # default: gh-pages
-    # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  # Development specific configuration
+  configure :development do
+    set :debug_assets, true
+
+    #use BetterErrors::Middleware
+    #BetterErrors.application_root = __dir__
   end
 
   # Build-specific configuration
@@ -107,6 +106,17 @@
       #options.svgo_options      = {}
     end
 
+
+
+  activate :deploy do |deploy|
+
+    deploy.build_before = true # default: false
+    deploy.method = :git
+    # Optional Settings
+    # deploy.remote   = "custom-remote" # remote name or git url, default: origin
+    # deploy.branch   = "custom-branch" # default: gh-pages
+    # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  end
 
   # Use relative URLs
   # activate :relative_assets
