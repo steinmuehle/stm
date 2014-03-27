@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'middleman', '~> 3.2'
-
 gem 'middleman-livereload'
 gem 'middleman-bower', '~> 1.0.2'
 gem 'middleman-gh-pages', '~> 0.0.2'
@@ -16,7 +15,12 @@ gem 'slim', '~> 2.0.1'
 gem 'susy', '~> 1.0.9'
 gem "modular-scale", "~> 2.0.4"
 gem 'compass-h5bp', '~> 0.1.2' # This only provides the html5-Boilerplate styles
+#gem 'better_errors', '~> 1.1.0'
+#gem "binding_of_caller"
+
 
 gem "normalize-scss", "~> 2.2.0"
 gem 'font-awesome-sass', '~> 4.0.3.1'
 gem 'leaflet-js', '~> 0.7.0.4', :require => false
+
+gem 'middleman-pry', '~> 0.0.3'
