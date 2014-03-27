@@ -1,4 +1,4 @@
-#= require leaflet-dist/leaflet
+#= require leaflet
 #= require leaflet-providers/leaflet-providers
 
 onMapClick = (e) ->
