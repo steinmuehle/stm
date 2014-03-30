@@ -47,11 +47,20 @@
     #@bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
     #sprockets.append_path File.join "#{root}", @bower_config["directory"]
   #end
+
+  #after_configuration do
+    #@bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+    #@bower_assets_path = File.join "#{root}", @bower_config["directory"]
+    #sprockets.append_path @bower_assets_path
+    ##sprockets.append_path 'vendor/assets/assets/leaflet-dist'
+  #end
+
   after_configuration do
     @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-    @bower_assets_path = File.join "#{root}", @bower_config["directory"]
-    sprockets.append_path @bower_assets_path
-    sprockets.append_path 'vendor/assets/assets/leaflet-dist'
+    Dir.glob(File.join("#{root}", @bower_config["directory"], "*", "fonts")) do |f|
+      sprockets.append_path f
+    end
+    sprockets.append_path File.join "#{root}", @bower_config["directory"]
   end
   # Methods defined in the helpers block are available in templates
   # helpers do
