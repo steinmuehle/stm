@@ -7,6 +7,8 @@ map = L.map("map").setView([ 52.0420556802915, 8.8904132197084979 ], 13)
 
 
 baseLayers = [ "OpenStreetMap.DE" ]
-overlays = [ "OpenStreetMap.Mapnik" ]
-layerControl = L.control.layers.provided(baseLayers, overlays).addTo(map)
+#overlays = [ "OpenStreetMap.Mapnik" ]
+layerControl = L.control.layers.provided(baseLayers).addTo(map)
 marker = L.marker([ 52.0420556802915, 8.8904132197084979 ]).addTo(map)
+    .bindPopup('<b>Steinmühle Lemgo</b><br /> Entruper Weg 88 <br />32657 Lemgo')
+    .openPopup();
