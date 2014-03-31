@@ -47,12 +47,21 @@
     #@bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
     #sprockets.append_path File.join "#{root}", @bower_config["directory"]
   #end
+
+  #after_configuration do
+    #@bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+    #@bower_assets_path = File.join "#{root}", @bower_config["directory"]
+    #sprockets.append_path @bower_assets_path
+    ##sprockets.append_path 'vendor/assets/assets/leaflet-dist'
+  #end
+
   after_configuration do
     @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-    @bower_assets_path = File.join "#{root}", @bower_config["directory"]
-    sprockets.append_path @bower_assets_path
+    Dir.glob(File.join("#{root}", @bower_config["directory"], "*", "fonts")) do |f|
+      sprockets.append_path f
+    end
+    sprockets.append_path File.join "#{root}", @bower_config["directory"]
   end
-
   # Methods defined in the helpers block are available in templates
   # helpers do
   #   def some_helper
@@ -60,12 +69,14 @@
   #   end
   # end
 
-  # Development specific configuration
-  configure :development do
-    set :debug_assets, true
-
-    #use BetterErrors::Middleware
-    #BetterErrors.application_root = __dir__
+  activate :deploy do |deploy|
+    # ...
+    deploy.build_before = true # default: false
+    deploy.method = :git
+    # Optional Settings
+    # deploy.remote   = "custom-remote" # remote name or git url, default: origin
+    # deploy.branch   = "custom-branch" # default: gh-pages
+    # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
   end
 
   # Build-specific configuration
@@ -106,17 +117,6 @@
       #options.svgo_options      = {}
     end
 
-
-
-  activate :deploy do |deploy|
-
-    deploy.build_before = true # default: false
-    deploy.method = :git
-    # Optional Settings
-    # deploy.remote   = "custom-remote" # remote name or git url, default: origin
-    # deploy.branch   = "custom-branch" # default: gh-pages
-    # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
-  end
 
   # Use relative URLs
   # activate :relative_assets
