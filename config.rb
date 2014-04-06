@@ -62,12 +62,15 @@
     end
     sprockets.append_path File.join "#{root}", @bower_config["directory"]
   end
+
   # Methods defined in the helpers block are available in templates
   # helpers do
   #   def some_helper
   #     "Helping"
   #   end
   # end
+
+
 
   activate :deploy do |deploy|
     # ...

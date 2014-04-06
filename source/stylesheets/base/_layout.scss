@@ -36,7 +36,7 @@ $ms-ratio: $golden;
 $grey: #f2f2f2;
 
 body {
-  background-image: url(../images/cream_dust.png);
+  background-image: url(../images/background_patterns/debut_light.png);
   background-repeat: repeat;
 }
 
@@ -51,6 +51,11 @@ body {
 .Footer {
   height: 100px;
 
+}
+
+.l-dark-bg-pattern {
+  background-image: url(../images/background_patterns/debut_dark.png);
+  background-repeat: repeat;
 }
 
 .l-center {
@@ -83,6 +88,7 @@ body {
 #map {
   height: 280px;
 }
+
 /*.c-grid {*/
   /*@include span-columns(8 alpha, 12);*/
 /*}*/
@@ -130,7 +136,7 @@ body {
   margin-left: (-1 * ms(3));
 }
 
-hr {
+.l-ying-ruler {
   width: ms(4);
   height: ms(4);
   margin-top: ms(6);
@@ -140,7 +146,6 @@ hr {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 /*
  * Basic settings
