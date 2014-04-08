@@ -13,6 +13,7 @@ gem "middleman-minify-html", "~> 3.1.1"
 gem "middleman-imageoptim", "~> 0.1.4"
 #gem 'middleman-neat', '~> 0.0.4'
 
+gem 'redcarpet', '~> 3.1.1'
 gem 'slim', '~> 2.0.1'
 gem 'susy', '~> 1.0.9'
 gem "modular-scale", "~> 2.0.4"

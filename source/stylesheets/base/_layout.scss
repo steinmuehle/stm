@@ -2,55 +2,57 @@
  *  Layout
  *  ========================================================================== */
 
-/*
- * Grid
- */
+@import "compass/css3";
 
-
-
-/*
- *@import "susy";
- *
- *$indent-val: .5em !default;
- *$paragraph-vertical-whitespace: false !default;
- *
- *$total-columns  : 12;
- *$column-width   : 4em;[>6%;<]
- *$gutter-width   : 1em;
- *[>$side-gutter-width: 2em;<]
- *$grid-padding   : $gutter-width;
- *$show-grid-backgrounds: true;
- */
-
-
-
+@import "compass/layout/sticky-footer";
+@include sticky-footer(100px);
 
 @import 'modular-scale';
 $ms-base: .2em;
 $ms-ratio: $golden;
 
-/*
- * Colors
- */
-
-$grey: #f2f2f2;
 
 body {
   background-image: url(../images/background_patterns/debut_light.png);
   background-repeat: repeat;
 }
 
+.container {
+  // include `container` if this element will contain a grid system.
+  @include container($total-columns);
+  // gives us our background stripes for development.
+  @include susy-grid-background;
+}
+
+
+
+.Header, .Footer, #map {
+  @include bleed($grid-padding);
+}
+
+a {
+  color: $heading-color;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+.quicksand {
+  color: $heading-color;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
 .Header {
   height: 768px;
-  width: 100%;
-  background-image: url(../images/singing-bowl.jpg);
+  background-image: url(../images/singing-bowl-c.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
 .Footer {
   height: 100px;
-
+  padding-top: 2em;
 }
 
 .l-dark-bg-pattern {
@@ -58,14 +60,9 @@ body {
   background-repeat: repeat;
 }
 
-.l-center {
-  width: 50%;
-  height: 50%;
-  overflow: auto;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  background-color: #fff;
+.l-bg-light-blue {
+  /*background-color: $light-blue;*/
+  /*@include bleed($grid-padding);*/
 }
 
 .l-txt-bottom {
@@ -83,34 +80,31 @@ body {
   height: 200px;
   margin-left: 100px;
   position: relative;
+  display: inline-block;
 }
 
 #map {
   height: 280px;
+  @include clearfix;
 }
 
-/*.c-grid {*/
-  /*@include span-columns(8 alpha, 12);*/
-/*}*/
-
-/*.l-grid {*/
-  /*[>@include span-columns(3, 8);<]*/
-  /*@include span-columns(8, 12);*/
-  /*@include omega(12);*/
-/*}*/
-
-/*.r-grid {*/
-  /*@include span-columns(8, 12);*/
-  /*@include omega(8);*/
-/*}*/
+.l-time-box {
+  @include bleed($grid-padding);
+  @include single-box-shadow;
+}
 
 .l-content {
-  max-width: 34em;
-  margin: 0 auto;
-  padding-left: 0;
-  padding-right: 0;
+  @include prefix(1);
+  width: columns(8 ,$total-columns);
+  @include clearfix;
 }
 
+/*
+ *FIXME how do i break out of teh container?
+ */
+.l-full-span {
+  width: span-columns($total-columns ,$total-columns);
+}
 
 /*.l-pullout-alpha {*/
   /*padding-top: 1.5em;*/
@@ -121,19 +115,19 @@ body {
 .l-pullout-alpha {
   padding-top: ms(4);
   padding-bottom: ms(4);
-  margin-left: (-1 * ms(4));
+  /*margin-left: (-1 * ms(4));*/
 }
 
 .l-pullout-beta {
   padding-top: ms(3);
   padding-bottom: ms(3);
-  margin-left: (-1 * ms(3));
+  /*margin-left: (-1 * ms(3));*/
 }
 
 .l-pullout-gamma {
   padding-top: ms(4);
   padding-bottom: ms(2);
-  margin-left: (-1 * ms(3));
+  /*margin-left: (-1 * ms(3));*/
 }
 
 .l-ying-ruler {
@@ -147,6 +141,11 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.l-text-light {
+  color: $creme;
+}
+
 /*
  * Basic settings
  */

@@ -2,6 +2,7 @@
 
 onMapClick = (e) ->
 map = L.map("map").setView([ 52.0420556802915, 8.8904132197084979 ], 13)
+map.scrollWheelZoom.disable()
 #L.tileLayer.provider('Stamen.Watercolor').addTo(map);
 
 

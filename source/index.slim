@@ -1,30 +1,18 @@
 article.l-content
   section
     h2.beta.l-pullout-alpha Willkommen
+    =partial "partials/willkommen"
 
-    p
-      | Ich freue mich über Ihr Interesse am Taijiquan und möchte Ihnen auf diesem Wege einige Informationen über diese alte, chinesische Bewegungskunst geben.
 
   section
-    h2.beta.l-pullout-alpha Über Taijiquan
-    p
-      | Taijiquan, hierzulande auch als Schattenboxen bekannt, hat sich in China über Jahrhunderte als Methode ganzheitlicher Gesundheitspflege bewährt und wird Tag für Tag von Millionen Menschen auf der ganzen Welt praktiziert.
-    br
-    p
-      | Selbstverteidigung, Meditation in Bewegung, gesundheitsfördernde Übungen, all dies vereinigt Taijiquan in sich.
-    p
-      | In sehr sanften und anmutigen Bewegungen gleitet man durch eine Folge verschiedener Stellungen: Die Form.
-    br
-    p
-      | Das regelmäßige Üben der Form führt zu geistiger Ruhe, besser Konzentrationsfähigkeit, Ausgeglichenheit und damit zu gesteigertem Wohlbefinden.
-    p
-      | Taijiquan korrigiert die Körperhaltung, stabilisiert den Kreislauf und fördert die Beweglichkeit und Vitalität.
-    p
-      | Taijiquan eignet sich für Jüngere wie für Ältere, für Frauen wie für Männer, unabhängig von der körperlichen Kondition.
+    h2#ueber-taiji.beta.l-pullout-alpha Über Taijiquan
 
-  hr.l-ying-ruler
+    =partial "partials/ueber_taichi"
 
-    h2.beta.l-pullout-alpha Kurse
+  hr
+
+  section.l-bg-light-blue
+    h2#kurse.beta.l-pullout-alpha Kurse
     h3.gamma.l-pullout-beta Grundkurse
     p
       | Der Unterricht aller Grundkurse basiert auf der langen Tradition des Yang-Familien-Stils und ist in aufbauenden Kursen gestaltet.
@@ -33,22 +21,58 @@ article.l-content
     p
       | Jeder Teil in sich ist abeschlossen.
 
-    h4.delta.l-pullout-gamma Teil 1 "Die Erde"
+    h4.delta.l-pullout-gamma Teil 1 <em>"Die Erde"</em>
     p
-      | Im ersten Teil "Die Erde" unterrichte ich die Basisübungen des Taijiquan. Sie dienen vor allem der Verwurzerlung in den Stellungen, der Entwicklung und Koordination der Schritte.
+      | Im ersten Teil <em>"Die Erde"</em> unterrichte ich die Basisübungen des Taijiquan. Sie dienen vor allem der Verwurzerlung in den Stellungen, der Entwicklung und Koordination der Schritte.
     p
       | Unterstützend unterrichte ich Qi Gong-Übungen, die gleichzeitig entspannend und stärkend auf Körper und Geist wirken.
+    br
+    div.l-time-box
+    p.quicksand <b>Kursbeginn: 7.5.2014</b>
+    =partial "partials/zeiten-taiji"
+    br
+    p.quicksand
+      | Kursgebühr: 100 €
+      br
+      | Kursdauer: 10 Wochen
 
-    h4.delta.l-pullout-gamma Teil 2 "Der Himmel"
+    h4.delta.l-pullout-gamma Teil 2 <em>"Der Himmel"</em>
     p
-      | Der zweite Teil "Der Himmel" umfasst aufbauende Techniken und Bewegungen.
+      | Der zweite Teil <em>"Der Himmel"</em> umfasst aufbauende Techniken und Bewegungen.
 
-    h4.delta.l-pullout-gamma Teil 3 "Der Mensch"
+    h4.delta.l-pullout-gamma Teil 3 <em>"Der Mensch"</em>
     p
-      | Der dritte Teil "Der Mensch" kombiniert Basistechniken mit fortgeschrittenen Techniken.
+      | Der dritte Teil <em>"Der Mensch"</em> kombiniert Basistechniken mit fortgeschrittenen Techniken.
     p
       | Der Mensch bewegt sich in Harmonie zwischen Himmel und Erde.
 
+    h3.gamma.l-pullout-beta Qigong
+    p
+      | <em>Qigong</em> sind Übungen, die zur Harmonisierung, Kräftigung und Kultivierung von Körper und Geist dienen.
+    p
+      | Meditation, Konzentration und Bewegung dienen als Basis für diese Bewegungsform.
+    br
+    p
+      | <b>Qi</b> = Atem, vitale Kraft, Lebensenergie
+    p
+      | <b>Gong</b> = Arbeit, Fähigkeit, Können
+    br
+    p
+      | Durch beharrliches Üben wird das Qi gekräftigt und kann ungehindert durch das Meridiansystem im Körper fließen und die Gesundheit und die Entspannung fördern.
+
+    h4.delta.l-pullout-gamma Taiji Qigong
+    p
+      | wurde 1982 von Professor <em>Lin Huosheng</em>, Shanghai, entwickelt und zur therapeutischen Unterstützung bei z.B. Bluthochdruck, Rücken- und Gelenkbeschwerden angewendet.
+
+    br
+    div.l-time-box
+    p.quicksand <b>Kursbeginn: 5.5.2014</b>
+    =partial "partials/zeiten-qigong"
+    br
+    p.quicksand
+      | Kursgebühr: 90 €
+      br
+      | Kursdauer: 10 Wochen
     h3.gamma.l-pullout-beta Teil F "Kurse für Fortgeschrittene"
     p
       | Nach Erlernen der gesamten Form können in fortlaufenden Kursen verschiedene Vertiefungsstufen erlernt werden.
@@ -80,18 +104,17 @@ article.l-content
     p
       | Die Wochenendkurse werden angekündigt.
 
-    h2.beta.l-pullout-alpha Zeiten
+    /h2#zeiten.beta.l-pullout-alpha Zeiten
+    /h3.gamma.l-pullout-beta Anfängerkurs
+    /h4.delta Teil 1 "Die Erde"
 
-    h3.gamma.l-pullout-beta Anfängerkurs
-    h4.delta Teil 1 "Die Erde"
+    /h3.gamma.l-pullout-beta Taiji Qi Gong
+    /h4.delta 18 Folgen
 
-    h3.gamma.l-pullout-beta Taiji Qi Gong
-    h4.delta 18 Folgen
-
-  hr.l-ying-ruler
+  hr
 
   section
-    h2.beta.l-pullout-alpha Über Silke Tracht
+    h2#ueber-silke.beta.l-pullout-alpha Über Silke Tracht
     p
       | Ausbildung begonnen bei Francis Pang, in Honolulu (Hawaii) und über vier Jahre fortgesetzt bei Rupert Shonaike, Köln.
     p
@@ -137,17 +160,16 @@ article.l-content
       li
         i.fa-li.fa.fa-angle-right
         | Großmeister Zhi Chang Li mit Lehranerkennung
-  hr.l-ying-ruler
+  hr.l-full-span
 
   section
-    h2.beta.l-pullout-alpha Kontakt
+    h2#kontakt.beta.l-pullout-alpha Kontakt
+  =partial "partials/_rdf-address"
 
 
-
-  hr.l-ying-ruler
 
   section
-    h2.beta.l-pullout-alpha Anfahrt
+    h3#anfahrt.beta.l-pullout-alpha Anfahrt
 
-  #map
+#map
 

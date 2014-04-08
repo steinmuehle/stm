@@ -1,0 +1,14 @@
+@import "compass/css3";
+table {
+  margin-top: 2em;
+  width: columns(8,10);
+  font-family: 'Quicksand', sans-serif;
+}
+
+th {
+  text-align: left;
+}
+table {
+  border: 1px solid #7689D7;
+  padding: 1em;
+}

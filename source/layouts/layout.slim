@@ -6,14 +6,14 @@ doctype html
     head
         meta charset="utf-8"
         meta http-equiv="X-UA-Compatible" content="IE-edge"
-        title Steinmühle Lemgo
-        meta name="description" content=""
+        title =data.page.title
+        meta name="description" content==data.page.meta_description
         meta name="viewport" content="width-device-width, initial-scale=1"
         link rel="author" href="humans.txt"
         /! Place favicon.ico and apple-touch-icon.png in the root directory
 
-        /link href='http://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,700|PT+Sans:400,700|Quicksand:400,700|Forum|Raleway:400,500,600,700' rel='stylesheet' type='text/css'
-        =stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,700|PT+Sans:400,700|Quicksand:400,700|Forum|Raleway:400,500,600,700'
+        /=stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,700|PT+Sans:400,700|Quicksand:400,700|Forum|Raleway:400,500,600,700'
+        =stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Quicksand:400,700|EB+Garamond'
         =stylesheet_link_tag 'main'
         =stylesheet_link_tag 'http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css'
         =javascript_include_tag 'modernizr'
@@ -23,9 +23,10 @@ doctype html
            p.browsehappy
              | You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
 
-        =partial "partials/header"
-        =yield
-        =partial "partials/footer"
+        .container
+            =partial "partials/header"
+            =yield
+            =partial "partials/footer"
 
         /script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
         /javascript:
