@@ -89,8 +89,10 @@ a {
 }
 
 .l-time-box {
-  @include bleed($grid-padding);
-  @include single-box-shadow;
+  /*@include bleed($grid-padding);*/
+  /*@include single-box-shadow;*/
+  padding: 2em;
+  background-color: $light-blue;
 }
 
 .l-content {
