@@ -2,10 +2,10 @@
   "name": "example-app",
   "version": "0.0.1",
   "dependencies": {
-    "pure": "~0.3.0",
-    "modernizr": "~2.6.2",
-    "typeplate": "~1.1.2",
-    "font-awesome": "~4.0.3",
+    "pure": "~>0.3.0",
+    "modernizr": "~>2.6.2",
+    "font-awesome": "~>4.0.3",
     "leaflet-providers": "~1.0.1",
+    "typeplate-starter-kit": "~1.1.4"
   }
 }
