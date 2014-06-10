@@ -15,7 +15,8 @@
 // import it **before** typeplate scss stylesheet
 // @import modules/vars-typeplate
 @import "base/vars-typeplate";
-@import "typeplate/scss/typeplate";
+/*@import "typeplate/scss/typeplate";*/
+@import "typeplate-starter-kit/scss/typeplate";
 
 // sass mixin library
 //@import bourbon
