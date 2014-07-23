@@ -83,14 +83,21 @@ a {
   display: inline-block;
 }
 
+.f-logo {
+  @extend .delta;
+  font-size: 24px;
+}
+
 #map {
   height: 280px;
   @include clearfix;
 }
 
 .l-time-box {
-  @include bleed($grid-padding);
-  @include single-box-shadow;
+  /*@include bleed($grid-padding);*/
+  /*@include single-box-shadow;*/
+  padding: 2em;
+  background-color: $light-blue;
 }
 
 .l-content {

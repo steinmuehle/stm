@@ -1,3 +1,3 @@
 |                   	|   Tag    	|  Zeit              	|
 |-------------------	|----------	|-------------------	|
-| Unterrichtsstunde 	| Dienstag 	| 20.00 - 21.30 Uhr 	|
+| Unterrichtsstunde 	| Donnerstag 	| 10.00 - 11.30 Uhr 	|
