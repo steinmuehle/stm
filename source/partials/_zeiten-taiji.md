@@ -1,4 +1,3 @@
 |                   	|   Tag    	|  Zeit              	|
 |-------------------	|----------	|-------------------	|
-| Unterrichtsstunde 	| Mittwoch 	| 18.30 - 20.00 Uhr 	|
-| Übungsstunde      	| Montag   	| 18.00 - 19.00 Uhr 	|
+| Unterrichtsstunde 	| Dienstag 	| 20.00 - 21.30 Uhr 	|
