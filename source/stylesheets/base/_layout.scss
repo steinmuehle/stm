@@ -1,16 +1,30 @@
 /*  ==========================================================================
  *  Layout
- *  ========================================================================== */
+ *  ==========================================================================
+ */
 
 @import "compass/css3";
+@import "compass/utilities/general/clearfix";
 
-@import "compass/layout/sticky-footer";
-@include sticky-footer(100px);
-
+/*
+ * ### Modular Scale ###
+ * See https://github.com/Team-Sass/modular-scale
+ */
 @import 'modular-scale';
 $ms-base: .2em;
 $ms-ratio: $golden;
 
+/*
+ * ### Footer ###
+ */
+@import "compass/layout/sticky-footer";
+@include sticky-footer(100px);
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-image: url(../images/background_patterns/debut_light.png);
@@ -18,17 +32,10 @@ body {
 }
 
 .container {
-  // include `container` if this element will contain a grid system.
-  @include container($total-columns);
-  // gives us our background stripes for development.
-  @include susy-grid-background;
+  @include background-grid($color: lightgrey);
+  @import "base/grid"
 }
 
-
-
-.Header, .Footer, #map {
-  @include bleed($grid-padding);
-}
 
 a {
   color: $heading-color;
@@ -89,47 +96,43 @@ a {
 }
 
 .l-time-box {
-  @include bleed($grid-padding);
+  /*@include bleed($grid-padding);*/
   @include single-box-shadow;
 }
 
 .l-content {
-  @include prefix(1);
-  width: columns(8 ,$total-columns);
+  /*@include prefix(1);*/
+  /*width: columns(8 ,$total-columns);*/
   @include clearfix;
 }
 
-/*
- *FIXME how do i break out of teh container?
- */
 .l-full-span {
-  width: span-columns($total-columns ,$total-columns);
 }
 
-/*.l-pullout-alpha {*/
-  /*padding-top: 1.5em;*/
-  /*padding-bottom: 1.5em;*/
-  /*margin-left: -1em;*/
-/*}*/
 
 .l-pullout-alpha {
-  padding-top: ms(4);
+  padding-top: ms(4); /* 4 up the modular scale. See link to github above */
   padding-bottom: ms(4);
-  /*margin-left: (-1 * ms(4));*/
 }
 
 .l-pullout-beta {
   padding-top: ms(3);
   padding-bottom: ms(3);
-  /*margin-left: (-1 * ms(3));*/
 }
 
 .l-pullout-gamma {
   padding-top: ms(4);
   padding-bottom: ms(2);
-  /*margin-left: (-1 * ms(3));*/
 }
 
+.l-center {
+  /*@include grid-span(10, 2);*/
+  /*height: 100vh;*/
+}
+
+/*
+ * The ruler between sections
+ */
 .l-ying-ruler {
   width: ms(4);
   height: ms(4);
@@ -145,8 +148,3 @@ a {
 .l-text-light {
   color: $creme;
 }
-
-/*
- * Basic settings
- */
-

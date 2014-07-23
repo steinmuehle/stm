@@ -1,24 +1,18 @@
-//
-// Fixed-width Susy Grid System
-//
+/*
+ * ### Singularity grid system ###
+ * BEWARE The grid won't be defined in here but in the layout classes themeselves.
+ */
 
-$show-grid-backgrounds: true;
+@import "singularitygs";
+@import "breakpoint";
 
-@import "susy";
 
-// For full Susy documentation, visit: http://susy.oddbird.net/tutorial/
+@include sgs-change('debug', true);
 
-$total-columns: 10; // 10 columns
-$column-width: 4em; // columns are 4em wide
-$gutter-width: 1em; // with 1em gutters
-$grid-padding: 0em; // and 1em padding on the grid container
-$container-style: fluid;
 
-/*// Define grid constants.*/
-/*$total-columns: 12;*/
 
-/*// You can use ems, px or % to override these defaults.*/
-/*$column-width: 60px;*/
-/*$gutter-width: 20px;*/
-/*$grid-padding: 10px;*/
-/*$side-gutter-width: 0px;*/
+/*
+ * Breakpoints
+ */
+/*$basic: 481px;*/
+/*$mobile: 456px 794px;*/

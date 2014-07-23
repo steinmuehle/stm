@@ -1,4 +1,7 @@
+require 'singularitygs'
+require 'breakpoint'
   ###
+
   # Page options, layouts, aliases and proxies
   ###
 
