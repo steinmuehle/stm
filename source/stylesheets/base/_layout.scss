@@ -83,6 +83,11 @@ a {
   display: inline-block;
 }
 
+.f-logo {
+  @extend .delta;
+  font-size: 24px;
+}
+
 #map {
   height: 280px;
   @include clearfix;
