@@ -28,6 +28,7 @@ body {
 
 .Header, .Footer, #map {
   @include bleed($grid-padding);
+
 }
 
 a {
@@ -44,11 +45,17 @@ a {
   font-weight: 400;
 }
 .Header {
-  height: 768px;
+  height: auto;
+  width: 100%;
   /*background-image: url(../images/singing-bowl-c.jpg);*/
-  background-image: url(../images/header.jpg);
-  background-size: 100% auto;
+  /*background-image: url(../images/header.jpg);*/
+  /*background-size: 100% auto;*/
   background-repeat: no-repeat;
+}
+
+.header-img {
+  width: 100%;
+  height: auto;
 }
 
 .Footer {
@@ -79,9 +86,10 @@ a {
   text-align: center;
   width: 150px;
   height: 200px;
+  left: 10px;
+  top: 0;
   margin-left: 100px;
-  position: relative;
-  display: inline-block;
+  position: absolute;
 }
 
 .f-logo {
