@@ -45,7 +45,8 @@ a {
 }
 .Header {
   height: 768px;
-  background-image: url(../images/singing-bowl-c.jpg);
+  /*background-image: url(../images/singing-bowl-c.jpg);*/
+  background-image: url(../images/header.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -151,6 +152,16 @@ a {
 
 .l-text-light {
   color: $creme;
+}
+
+.popup {
+  position: relative;
+  background: white;
+  padding: 20px;
+  width: auto;
+  max-width: 800px;
+  margin: 20px auto;
+  color: #444;
 }
 
 /*
