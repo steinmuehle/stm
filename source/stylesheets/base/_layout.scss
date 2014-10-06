@@ -153,6 +153,19 @@ a {
   color: $creme;
 }
 
+.popup {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  width: auto;
+  max-width: 60%;
+  margin: 20px auto;
+  color: #444;
+}
+
+.mfp-content {
+  text-align: center !important;
+}
 /*
  * Basic settings
  */
