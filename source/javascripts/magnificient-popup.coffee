@@ -1,6 +1,6 @@
-$.magnificPopup.open
-  items:
-    src: "#popup"
-    type: "inline"
+#$.magnificPopup.open
+  #items:
+    #src: "#popup"
+    #type: "inline"
 
-  modal: false
+  #modal: false
