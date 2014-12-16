@@ -96,7 +96,7 @@
      activate :minify_javascript
 
     # Enable cache buster
-     #activate :asset_hash
+     activate :asset_hash
 
     #Minify html
     activate :minify_html
