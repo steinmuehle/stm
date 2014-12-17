@@ -4,51 +4,51 @@ doctype html
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     head
-        meta charset="utf-8"
-        meta http-equiv="X-UA-Compatible" content="IE-edge"
-        title =data.page.title
-        meta name="description" content==data.page.meta_description
-        meta name="viewport" content="width-device-width, initial-scale=1"
-        link rel="author" href="humans.txt"
-        /! Place favicon.ico and apple-touch-icon.png in the root directory
+      meta charset="utf-8"
+      meta http-equiv="X-UA-Compatible" content="IE-edge"
+      title =data.page.title
+      meta name="description" content==data.page.meta_description
+      meta name="viewport" content="width-device-width, initial-scale=1"
+      link rel="author" href="humans.txt"
+      /! Place favicon.ico and apple-touch-icon.png in the root directory
 
-        /=stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,700|PT+Sans:400,700|Quicksand:400,700|Forum|Raleway:400,500,600,700'
-        =stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Quicksand:400,700|EB+Garamond'
-        =stylesheet_link_tag 'main'
-        =stylesheet_link_tag 'http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css'
-        /=stylesheet_link_tag '//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/magnific-popup.css'
-        =javascript_include_tag 'modernizr'
-        /=javascript_include_tag 'google-analytics'
+      /=stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,700|PT+Sans:400,700|Quicksand:400,700|Forum|Raleway:400,500,600,700'
+      =stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Quicksand:400,700|EB+Garamond'
+      =stylesheet_link_tag 'main'
+      =stylesheet_link_tag 'http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css'
+      /=stylesheet_link_tag '//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/magnific-popup.css'
+      =javascript_include_tag 'modernizr'
+      /=javascript_include_tag 'google-analytics'
 
     body
-        =partial "partials/google-tag"
-        /[if lt IE 7]
-           p.browsehappy
-             | You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+      =partial "partials/google-tag"
+      /[if lt IE 7]
+         p.browsehappy
+           | You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
 
-        .container
-            =partial "partials/header"
-            =yield
-            =partial "partials/footer"
+      .container
+          =partial "partials/header"
+          =yield
+          =partial "partials/footer"
 
-        /script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
-        /javascript:
-            window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+      /script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+      /javascript:
+          window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 
-        =javascript_include_tag 'plugins'
-        =javascript_include_tag 'http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js'
-        =javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.0.7/leaflet-providers.min.js'
-        =javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
-        /=javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/jquery.magnific-popup.min.js'
-        =javascript_include_tag 'main'
+      =javascript_include_tag 'plugins'
+      =javascript_include_tag 'http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js'
+      =javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.0.7/leaflet-providers.min.js'
+      =javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
+      /=javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/jquery.magnific-popup.min.js'
+      =javascript_include_tag 'main'
 
-        /! Google Analytics: change UA-XXXXX-X to be your site's ID.
+      /! Google Analytics: change UA-XXXXX-X to be your site's ID.
 
-        /javascript:
-            /(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            /function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            /e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            /e.src='//www.google-analytics.com/analytics.js';
-            /r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            /ga('create','UA-XXXXX-X');ga('send','pageview');
+      /javascript:
+          /(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+          /function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+          /e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+          /e.src='//www.google-analytics.com/analytics.js';
+          /r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+          /ga('create','UA-XXXXX-X');ga('send','pageview');
 
