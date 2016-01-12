@@ -10,7 +10,7 @@ gem "normalize-scss", "~> 2.2.0"
 gem 'middleman-autoprefixer', '~> 0.2.3'
 gem 'middleman-favicon-maker', '~> 3.2'
 gem "middleman-minify-html", "~> 3.1.1"
-gem "middleman-imageoptim", "~> 0.1.4"
+gem 'middleman-imageoptim', '~> 0.2.1'
 #gem 'middleman-neat', '~> 0.0.4'
 
 gem 'redcarpet', '~> 3.1.1'
