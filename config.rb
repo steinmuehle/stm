@@ -102,28 +102,34 @@
     activate :minify_html
 
     # Optimize images
-    activate :imageoptim do |options|
-      # print out skipped images
-      options.verbose = false
+  activate :imageoptim do |options|
+    # Use a build manifest to prevent re-compressing images between builds
+    options.manifest = true
 
-      # Setting these to true or nil will let options determine them (recommended)
-      options.nice = true
-      options.threads = true
+    # Silence problematic image_optim workers
+    options.skip_missing_workers = true
 
-      # Image extensions to attempt to compress
-      options.image_extensions = %w(.jpg .gif .svg) #%w(.png .jpg .gif .svg)
+    # Cause image_optim to be in shouty-mode
+    options.verbose = false
 
-      # compressor worker options, individual optimisers can be disabled by passing
-      # false instead of a hash
-      options.pngcrush_options  = {:chunks => ['alla'], :fix => false, :brute => false}
-      #options.pngout_options    = {:copy_chunks => false, :strategy => 0}
-      options.optipng_options   = {:level => 6, :interlace => false}
-      options.advpng_options    = {:level => 4}
-      options.jpegoptim_options = {:strip => ['all'], :max_quality => 100}
-      options.jpegtran_options  = {:copy_chunks => false, :progressive => true, :jpegrescan => true}
-      options.gifsicle_options  = {:interlace => false}
-      #options.svgo_options      = {}
-    end
+    # Setting these to true or nil will let options determine them (recommended)
+    options.nice = true
+    options.threads = true
+
+    # Image extensions to attempt to compress
+    options.image_extensions = %w(.png .jpg .gif .svg)
+
+    # Compressor worker options, individual optimisers can be disabled by passing
+    # false instead of a hash
+    options.advpng    = { :level => 4 }
+    options.gifsicle  = { :interlace => false }
+    options.jpegoptim = { :strip => ['all'], :max_quality => 100 }
+    options.jpegtran  = { :copy_chunks => false, :progressive => true, :jpegrescan => true }
+    options.optipng   = { :level => 6, :interlace => false }
+    options.pngcrush  = { :chunks => ['alla'], :fix => false, :brute => false }
+    options.pngout    = { :copy_chunks => false, :strategy => 0 }
+    options.svgo      = {}
+  end
 
 
   # Use relative URLs
