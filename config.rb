@@ -102,9 +102,9 @@
     activate :minify_html
 
     # Optimize images
-  activate :imageoptim do |options|
+  deactivate :imageoptim do |options|
     # Use a build manifest to prevent re-compressing images between builds
-    options.manifest = true
+    options.manifest = false
 
     # Silence problematic image_optim workers
     options.skip_missing_workers = true
