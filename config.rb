@@ -40,6 +40,8 @@
   activate :bower
   activate :autoprefixer
 
+  activate :directory_indexes
+
   require 'slim' # Might be not needed
   set :slim, pretty: true
 
