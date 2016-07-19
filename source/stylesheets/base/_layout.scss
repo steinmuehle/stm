@@ -26,9 +26,14 @@ body {
 
 
 
+
 .Header, .Footer, #map {
   @include bleed($grid-padding);
 
+}
+
+.text-center {
+  text-align: center;
 }
 
 a {
