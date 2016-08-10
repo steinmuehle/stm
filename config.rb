@@ -104,7 +104,7 @@
     activate :minify_html
 
     # Optimize images
-  deactivate :imageoptim do |options|
+  activate :imageoptim do |options|
     # Use a build manifest to prevent re-compressing images between builds
     options.manifest = false
 
