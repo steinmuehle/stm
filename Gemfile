@@ -20,4 +20,5 @@ gem "modular-scale", "~> 2.0.4"
 gem 'compass-h5bp', '~> 0.1.2' # This only provides the html5-Boilerplate styles
 
 gem 'middleman-pry', '~> 0.0.3'
-gem 'eventmachine', '~> 1.0.9'
+gem 'eventmachine', '~> 1.2', '>= 1.2.2'
+
