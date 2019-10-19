@@ -29,7 +29,6 @@
   helpers do
   end
 
-
   # Automatic image dimensions on image_tag helper
   activate :automatic_image_sizes
 
@@ -47,13 +46,13 @@
 
   require 'redcarpet'
   set :markdown_engine, :redcarpet
-  set :markdown, :fenced_code_blocks => true, :smartypants => true, :hard_wrap => true, :highlight => true, :tables => true
-
+  set :markdown, fenced_code_blocks: true, smartypants: true, hard_wrap: true,
+                 highlight: true, tables: true
 
   # default directories
-  #set :js_dir, 'javascripts'
-  #set :css_dir, 'stylesheets'
-  #set :images_dir, 'images'
+  # set :js_dir, 'javascripts'
+  # set :css_dir, 'stylesheets'
+  # set :images_dir, 'images'
 
   # Add bower's directory to sprockets asset path
   #after_configuration do
@@ -76,9 +75,6 @@
     sprockets.append_path File.join "#{root}", @bower_config["directory"]
   end
 
-
-
-
   activate :deploy do |deploy|
     # ...
     deploy.build_before = true # default: false
@@ -92,19 +88,19 @@
   # Build-specific configuration
   configure :build do
     # For example, change the Compass output style for deployment
-     activate :minify_css
+    activate :minify_css
 
     # Minify Javascript on build
-     activate :minify_javascript
+    activate :minify_javascript
 
     # Enable cache buster
-     activate :asset_hash
+    activate :asset_hash
 
-    #Minify html
+    # Minify html
     activate :minify_html
 
     # Optimize images
-  activate :imageoptim do |options|
+    activate :imageoptim do |options|
     # Use a build manifest to prevent re-compressing images between builds
     options.manifest = false
 
@@ -131,8 +127,7 @@
     options.pngcrush  = { :chunks => ['alla'], :fix => false, :brute => false }
     options.pngout    = { :copy_chunks => false, :strategy => 0 }
     options.svgo      = {}
-  end
-
+    end
 
   # Use relative URLs
   # activate :relative_assets
@@ -140,10 +135,7 @@
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
-
-
-
-
+  
   # The following is just for reference. http://sunaku.github.io/slim-tilt-redcarpet.html
   # Setup for Redcarpet and Slim
   #require 'slim'
