@@ -11,6 +11,8 @@ vendor/
 # ignore bin directory
 bin/
 
+node_modules/
+
 .cache
 .envrc
 *.log
