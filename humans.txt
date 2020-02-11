@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <name> -- <role> -- <twitter>
+
+# THANKS
+
+    <name>
+
+# SITE
+
+    Last Update: YYYY/MM/DD
+    Standards: HTML5, CSS3
+    Components: HTML5 Boilerplate, Modernizr, PureCSS, Typeplate, Normalize.css
+    Bourbon, Neat
+    Software/Tools: Slim, Sass, Coffeescript, Middleman, Bower, LiveReload
+    IDE: vim
+

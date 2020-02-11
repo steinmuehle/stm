@@ -1,0 +1,1 @@
+(function(){var o,e,n,r,i;for(i=function(){},r=["assert","clear","count","debug","dir","dirxml","error","exception","group","groupCollapsed","groupEnd","info","log","markTimeline","profile","profileEnd","table","time","timeEnd","timeStamp","trace","warn"],e=r.length,o=window.console=window.console||{};e--;)n=r[e],o[n]||(o[n]=i)}).call(this);

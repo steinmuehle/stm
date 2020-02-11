@@ -1,0 +1,1 @@
+(function(){var e,o,r,p,a;a=function(e){},r=L.map("map").setView([52.0420556802915,8.890413219708497],13),r.scrollWheelZoom.disable(),e=["OpenStreetMap.DE"],o=L.control.layers.provided(e).addTo(r),p=L.marker([52.0407066999999,8.891762199999999]).addTo(r).bindPopup("<b>Steinm\xfchle Lemgo</b><br /> Entruper Weg 88 <br />32657 Lemgo").openPopup()}).call(this);
