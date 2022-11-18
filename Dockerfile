@@ -17,7 +17,8 @@ COPY bower.json ./
 RUN npm install -g bower 
 RUN bower install
 
-COPY . .
+# COPY . .
+VOLUME ["/app"]
 
 EXPOSE 4567
 
