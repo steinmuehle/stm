@@ -1,0 +1,15 @@
+version: '3'
+
+env:
+  IMG: jottr/middleman-stm
+
+tasks:
+  build:
+    cmds:
+      - docker build -t $IMG .
+  clean:
+    cmds:
+      - docker rmi $IMG
+  run:
+    cmds:
+      - docker run -it -p 4567:4567 --platform linux/amd64 $IMG
