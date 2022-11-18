@@ -13,7 +13,7 @@ gem 'middleman-favicon-maker', '~> 3.2'
 gem 'middleman-gh-pages', '~> 0.0.2'
 gem 'middleman-imageoptim', '~> 0.2.1'
 gem 'middleman-pry', '~> 0.0.3'
-gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+gem 'redcarpet', '~> 3.5'
 gem 'slim', '~> 2.0.1'
 gem 'susy', '~> 1.0.9'
 
