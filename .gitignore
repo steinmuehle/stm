@@ -29,3 +29,6 @@ Temporary Items
 .apdisk
 
 .direnv
+
+# hugo
+.hugo_build.lock
